@@ -4,17 +4,14 @@ using namespace std;
 #define ll long long
 
 void solve() {
+	//input
 	int a, b, a1, b1, a2, b2;
-	cin >> a >> b >> a1 >> b1 >> a2 >> b2;
-	if(a>b)
-		swap(a, b);
-	if(a1>b1)
-		swap(a1, b1);
-	if(a2>b2)
-		swap(a2, b2);
-	if(a==a1&&b==b1)
+	cin >> a >> b >> a1 >> b1 >> a2 >> b2;a
+	
+	//check if a and b is one of the two pairs given
+	if((a==a1&&b==b1)||(a==b1&&b==a1))
 		cout << 1;
-	else if(a==a2&&b==b2)
+	else if((a==a2&&b==b2)||(a==b2&&b==a2))
 		cout << 2;
 	else
 		cout << 0;
